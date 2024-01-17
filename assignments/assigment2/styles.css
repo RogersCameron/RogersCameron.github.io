@@ -1,0 +1,70 @@
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Styling */
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Navigation Bar Styling */
+#main-nav nav {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+#main-nav nav a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#main-nav nav a:hover {
+    color: #ddd;
+}
+
+/* Content Styling */
+#content {
+    padding: 20px;
+    margin: auto;
+    width: 80%;
+    background: #fff;
+}
+
+/* Image Styling */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Table Styling */
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #333;
+    color: white;
+}
+
+
+/* Paragraph Styling */
+p {
+    text-align: justify;
+    margin-bottom: 20px;
+}
+

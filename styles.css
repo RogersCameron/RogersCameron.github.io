@@ -1,0 +1,38 @@
+body {
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    background-color: #1F2D40;
+    margin: 0;
+}
+
+#title {
+    background: #252273;
+    padding: 10px;
+    width: 80%;
+    margin: auto;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#links a {
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 2px;
+    color: white;
+}
+
+
+h1, h2, p {
+    color: white;
+}
+
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+
+

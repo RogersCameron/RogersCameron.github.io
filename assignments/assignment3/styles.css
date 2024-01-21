@@ -5,6 +5,31 @@ body {
 
 
 /* Structure */
+.big-idea p{
+padding-left: 20px;
+}
+.big-idea img{
+    padding-left: 30%;
+
+}
+.one{
+    border: solid 2px #59111E;
+    border-bottom: #59111E;
+}
+
+.two{
+    border: solid #59111E;
+    border-bottom: transparent;
+}
+
+.two h3{
+    padding-left: 10px;
+
+}
+.big-idea h4{
+    padding-left:10px;
+
+}
 
 #content {
     padding: 5px;
@@ -27,7 +52,22 @@ body {
     background-color: #F2F2F2;
     text-align: center;
 }
+.bottom{
+    background-color: #59111E;
+}
+.bottom img{
+    padding-left:30%;
 
+}
+
+.image-text h4{
+    text-align: center;
+    padding-top: 20px;
+
+}
+.image-text p{
+    text-align: center;
+}
 /* Main Navigation */
 
 #main-nav ul {
@@ -40,7 +80,7 @@ body {
     list-style-type: none;
     background: #59111E;
     padding: 5px;
-    border-bottom: 1px #A0D3F2;
+    border-bottom: 2px solid #F2F2F2;
     border-right: 2px solid #F2F2F2;
 }
 
@@ -59,7 +99,11 @@ body {
     list-style-type: none;
     
 }
-
+.one h3 {
+    padding-left: 40px;
+    padding-top: 20px;
+    
+}
 
 /* Typography */
 
@@ -72,7 +116,7 @@ h1 {
 
 /* For larger resolutions */
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 900px) {
     .columns {
         display: flex;
         
@@ -92,7 +136,7 @@ h1 {
         padding-left: 5px;
     }
     .one h3{
-        padding-left: 50px;
+        padding-left: 40px;
     }
     .columns img {
         max-width: 80%;
@@ -119,35 +163,30 @@ h1 {
         width: 200px; /* Adjust as needed */
         height: 200px;
         margin-bottom: 10px;
-        padding-left: 5px;
+       padding-left: 5px;
         
     }
 
     
     .big-idea p {
         margin: 0; /* Removes default paragraph margin */
-        /* Additional styling for the text */
+        
     }
     .bottom {
         background-color: #59111E;
         height: auto;
         text-align: center;
     }
-    .bottom .image-text {
-        margin-right: 10px;
-        margin-left: 10px;
-    }
-    .bottom .image-text:last-child {
-        margin-right: 0; /* Ensure the last element doesn't have right margin */
-    }
-    .bottom .image-text img {
-        margin-bottom: 10px; /* Space between image and text */
-    }
+    
     .bottom .image-text h4,
     .bottom .image-text p {
         margin:  10px;
         padding-top:10px;
         
     }
-
+    .bottom img{
+        padding:3%;
+    
+    }
+   
 }

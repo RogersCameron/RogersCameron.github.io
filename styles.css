@@ -15,7 +15,7 @@ p {
     padding: 0 10px;
 }
 
-.top {
+.top, #projects {
     text-align: center;
     padding: 20px 0;
     background-color: #56738C;
@@ -27,7 +27,7 @@ p {
     justify-content: space-around;
 }
 
-.assignment-container {
+.assignment-container, .project-container {
     border: 2px solid #B8CAD9;
     border-radius: 10px;
     margin: 10px;
@@ -41,22 +41,23 @@ p {
     align-items: center;
 }
 
-.assignment-container a{
+.assignment-container a, .project-container a {
     text-decoration: none;
     color: #011C40;
 }
-.assignment-container h4 {
+
+.assignment-container h4, .project-container h4 {
     margin: 10px 0;
 }
 
-.assignment-container img {
+.assignment-container img, .project-container img {
     width: 100%;
     max-width: 200px;
     height: auto;
     margin-bottom: 10px;
 }
 
-.assignment-container p {
+.assignment-container p, .project-container p {
     text-align: left;
     margin-top: 0;
 }
@@ -73,7 +74,7 @@ p {
         justify-content: center;
     }
     
-    .assignment-container {
+    .assignment-container, .project-container {
         width: calc(33% - 40px); /* Adjust for 3 cards per row */
     }
 }

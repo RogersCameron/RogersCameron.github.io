@@ -1,0 +1,307 @@
+/* Reset default margin and padding */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.main-container {
+    display: flex;
+    margin-left:150px;
+    
+}
+
+#side-nav {
+    background-color: #f3f3f3; /* Example color */
+    width: 600px; /* Fixed width for the sidebar */
+    margin-top:30px;
+    border-top: 1px solid #000; /* Top border */
+    border-bottom: 1px solid #000;
+    padding:0px;
+    
+}
+
+#side-nav ul {
+    list-style-type: none; /* Removes bullet points */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+    flex-direction: column;
+
+}
+
+#side-nav ul li {
+    margin-bottom: 5px; /* Adds space between list items */
+    border-bottom: 1px solid rgb(211, 211, 211); 
+    
+}
+
+#side-nav ul li a {
+    text-decoration: none; /* Removes underline from links */
+    color: black; /* Text color for the links */
+    padding: 5px; /* Adds padding to make the links larger and easier to click */
+    display: block; /* Each link will take up the full width of its container */
+    /* Add any hover effects or additional styling as needed */
+    font-size: larger;
+    
+}
+
+
+.department-info {
+    flex-grow: 1; /* Allows the section to take the remaining space */
+    /* Rest of your styles */
+}
+.department-info a{
+    color: #73000a;
+
+}
+.department-info p{
+    width: 70%;
+    padding-left: 20px;
+    margin: 0;
+    padding-bottom: 10px;
+    border-bottom: solid lightgrey;
+    border-width: 1px;
+    font-size: larger;
+    line-height: 1.6;
+
+
+}
+.department-info h2{
+    width: 70%;
+    padding-left: 20px;
+
+}
+
+/* Header styles */
+
+.main-header img {
+    width: 280px;
+    height: auto;
+    margin-right: 20px;
+    transform:translateX(150px) translateY(2px);
+}
+.main-header {
+    display: flex;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 0 10px;
+    height: 75px;
+    /* Other styling as needed */
+}
+
+.main-header nav {
+    display: flex;
+    margin-left: 300px;
+    margin-bottom: 40px;
+
+}
+   /* Sub-header styles */
+.sub-header {
+    background-color: #73000a; /* Lighter background color for sub-header */
+    padding: 5px;
+    height: 25px; /* Smaller height than the main header */
+    display: flex;
+    align-items: center;
+    
+    /* Additional styling as needed */
+}
+.sub-header h2 {
+    color:white;
+    padding-left: 150px;
+
+
+}
+.sub-header nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    /* Additional styling as needed */
+}
+
+.sub-header nav ul li a {
+    text-decoration: none;
+    color: black; /* Adjust color as needed */
+    padding: 5px;
+    font-size: 0.9em; /* Smaller font size */
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    padding: 5px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 10px;
+}
+
+/* Main content styles */
+.main-content {
+    padding: 20px;
+    background-color: white;
+    
+}
+
+
+.department-info img {
+    display: block;
+    margin-left: 20px;
+    margin-right:0;
+    margin-top: 30px;
+
+}
+.department-info h2{
+    color:#73000a;
+}
+
+/* Container for highlights and the box */
+.content-container {
+    display: flex;
+    align-items: flex-start;
+
+    
+}
+
+/* Highlights container */
+.highlights-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    
+   
+}
+
+.highlights {
+    background-color: aqua;
+    border-bottom: 1px solid grey;
+    padding: 0px;
+    margin-bottom: 20px;
+    width: 50%;
+    margin-left:370px;
+    
+   
+    
+}
+
+.highlights img {
+    width: 100px;
+    height: auto;
+    
+   
+}
+.highlights-section h3{
+    margin-left: 370px;
+   
+
+}
+.highlights-section p{
+    padding: 0;
+}
+.text-content  {
+    display: flex;
+    flex-direction: column;
+    padding: -25px;
+    border-bottom: 1px solid grey;
+
+    
+}
+.text-content h4 {
+    color: #73000a;
+    margin-bottom: 0; /* Removes bottom margin */
+    font-size: larger;
+
+}
+
+.text-content p {
+    display: flex;
+    margin-top: 5px; /* Removes top margin */
+    margin-bottom: 10px;
+    font-size: larger;
+   
+
+}
+
+/* Box style */
+.box-container {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: flex-start; /* Align items to the start (left side) */
+    margin-top: 38px;
+    margin-right: 300px;
+    
+}
+
+.box-style, .box-style2 {
+    border: 1px solid lightgrey;
+    padding: 20px;
+    width: 300px; /* Width is the same for both */
+    background-color: #fff;
+    margin-bottom: 20px; /* Space between boxes */
+    border-left: 5px solid #73000a ;
+    
+}
+
+.box-style {
+    height: 250px; /* Height for box 1 */
+    width: 210px;
+    
+}
+
+.box-style2 {
+    height: 500px;
+    width: 250px;
+    padding: 0;
+    background-color: #ECECEC;;
+}
+
+.box-style2 img {
+    width: 250px;
+   
+}
+.box-style2 p , .box-style2 h3{
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+.box-style2 h3{
+    color: #73000a ;
+}
+
+/* Footer styles */
+.sub-footer{
+    height: 55px;
+    background-color: #ECECEC;
+
+}
+.main-footer{
+    height: 300px;
+    text-align: center;
+    padding: 20px;
+    background-color: #73000a ;
+}
+.last-footer{
+    height: 50px;
+    background-color: #000;
+}
+
+/* Media query for responsive adjustments */
+@media only screen and (max-width: 900px) {
+    .content-container {
+        flex-direction: column;
+    }
+
+    .main-header img, .highlights, .box-style {
+        width: 100%;
+    }
+}

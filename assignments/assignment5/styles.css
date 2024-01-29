@@ -3,226 +3,387 @@ body, html {
     margin: 0;
     padding: 0;
     width: 100%;
-    font-family: Arial, sans-serif; /* Example font */
+    font-family: Arial, sans-serif;
+}
+#search {
+    background-color: black; 
+    width: 250px; 
+    height: 20px;
+    padding: 5px;
+    display: flex; 
+    align-items: center;
+    border: 1px solid #ccc;
+    margin-top: 50px; /* adjust as needed to move down */
+    margin-right: 100px; /* adjust as needed to move left */
+    transform:translateX(-120px) translateY(-10px);
 }
 
-/* Flex Container for the whole body to hold the sidebars and main content */
-.flex-container {
+
+#search input[type="text"] {
+    width: 85%; /* adjust as needed */
+    border: none;
+    background: transparent;
+    margin-right: 5px;
+    padding-left: 10px;
+    font-size: 16px;
+    outline: none; /* removes the default focus outline */
+    
+    
+}
+
+#search button {
+    width: 15%; /* adjust as needed */
+    height: 100%;
+    background-color: #4b9cd3; /* button color */
+    border: none;
+    border-radius: 10px; /* rounded corners for button */
+    cursor: pointer;
+    color: white;
+    text-align: center;
+}
+
+#search button:hover {
+    background-color: #3a8bc2; /* slightly darker color on hover */
+}
+
+/* Additional styling for search icon if needed */
+
+.main-header{
+    background-color: #ECECEC;
+
+}
+.main-container {
     display: flex;
-    min-height: 100vh; /* Full viewport height */
+    margin-left:150px;
+    
 }
 
-/* Sidebar styles */
-.sidebar {
-    flex: 1; /* Adjust as necessary for size */
-    padding: 20px;
-    background-color: #f3f3f3; /* Example color */
-    /* Add additional styling as needed */
+#side-nav {
+    width: 600px; /* Fixed width for the sidebar */
+    margin-top:30px;
+    border-top: 1px solid #000; /* Top border */
+    border-bottom: 1px solid #000;
+    padding:0px;
+    
 }
 
-/* Main content styles */
-.main-content {
-    flex: 3; /* Adjust as necessary for size */
-    padding: 20px;
-    background-color: white; /* Example color */
-    /* Add additional styling as needed */
+#side-nav ul {
+    list-style-type: none; /* Removes bullet points */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+    flex-direction: column;
+
 }
 
-/* Highlights section within main content */
-.highlights {
-    display: flex;
-    align-items: flex-start; /* Align items to the start of the cross axis, i.e., top */
-    margin-bottom: 20px; /* Space between each highlight */
-    background-color: aqua; /* Background color of the highlight */
-    border-bottom: 1px solid grey; /* Bottom border */
-    width: 30%; /* Width of the highlight box */
-    margin-left: 25%; /* Centering the highlight box */
-    padding: 15px; /* Inner space within the highlight box */
+#side-nav ul li {
+    margin-bottom: 5px; /* Adds space between list items */
+    border-bottom: 1px solid rgb(211, 211, 211); 
+    
 }
 
-
-.highlights .text-content {
-    flex-grow: 1; /* Text content takes up remaining space */
-    display: flex;
-    flex-direction: column; /* Stack children elements vertically */
-    justify-content: center; /* Center content vertically if there's extra space */
-}
-
-.highlights h4, .highlights p {
-    margin: 0; /* Reset default margin */
-    /* Add additional styling for font size, line-height, etc., as needed */
-}
-
-.highlights h4 {
-    font-size: 1em; /* Heading font size */
-    font-weight: bold; /* Bold font for the heading */
-}
-
-.highlights p {
-    font-size: 0.9em; /* Paragraph font size */
-    line-height: 1.4; /* Line height for paragraph */
+#side-nav ul li a {
+    text-decoration: none; /* Removes underline from links */
+    color: black; /* Text color for the links */
+    padding: 5px; /* Adds padding to make the links larger and easier to click */
+    display: block; /* Each link will take up the full width of its container */
+    /* Add any hover effects or additional styling as needed */
+    font-size: larger;
+    
 }
 
 
-.two h3{
-    padding-left: 350px; 
+.department-info {
+    flex-grow: 1; /* Allows the section to take the remaining space */
+    /* Rest of your styles */
 }
-.two {
-    flex-grow: 1; /* Allows the section to grow and take available space */
-    margin-right: 0; 
+.department-info a{
+    color: #73000a;
+
 }
+.department-info p{
+    width: 70%;
+    padding-left: 20px;
+    margin: 0;
+    padding-bottom: 10px;
+    border-bottom: solid lightgrey;
+    border-width: 1px;
+    font-size: larger;
+    line-height: 1.6;
 
 
-.main-section h2 {
-    padding-left: 350px; 
 }
+.department-info h2{
+    width: 70%;
+    padding-left: 20px;
 
-.highlights img {
-    margin-right: 20px; /* Space between image and text */
-    width: 150px; /* Adjust as necessary */
-
-} /* Maintain aspect ratio */
-.content-container {
-    display: flex;
-    align-items: flex-start; /* Align items to the top */
-    gap: 0px; /* Adjust gap between elements if needed */
-}
-
-
-/* Additional text content styling */
-.text-content {
-    /* Add additional styling as needed */
 }
 
 /* Header styles */
-.header-container {
-    background-color: black;
-    color: white;
-}
 
 .main-header img {
     width: 280px;
     height: auto;
-    transform: translateX(150px) translateY(10px); /* Adjust the values as needed */
+    margin-right: 20px;
+    transform:translateX(150px) translateY(2px);
 }
-.box-style {
-    border: 1px solid #000; /* Gives the box a border */
-    padding: 20px; /* Provides some space inside the box */
-    margin-left: 0;
-    width: 300px; /* Sets the width of the box */
-    height: 200px; /* Sets the height of the box */
-    background-color: #fff; /* Sets the background color of the box */
-    
-}
-
-
-.dep {
-    display: flex;
-    align-items: center; /* Vertically center align items */
-    background-color: aqua;
-    border-bottom: solid grey;
-    width: 57%;
-    margin-left: 25%;
-}
-
-#main-img {
-    margin-left: 25%;
-    margin-bottom:px;
-    
-}
-
-/* Navigation styles */
-#main-nav, #sub-nav {
-    text-decoration: none;
-    color: white;
-    /* Add other styles as needed */
-}
-
 .main-header {
     display: flex;
     align-items: center;
-    height: 75px; /* Set a specific height as needed */
-    padding: 0 10px; /* Adjust padding as required */
+    background-color: black;
+    color: white;
+    padding: 0 10px;
+    height: 75px;
+    /* Other styling as needed */
+}
+
+.main-header nav {
+    display: flex;
+    margin-left: 300px;
+    margin-bottom: 40px;
+
+}
+   /* Sub-header styles */
+.sub-header {
+    background-color: #73000a; /* Lighter background color for sub-header */
+    padding: 5px;
+    height: 25px; /* Smaller height than the main header */
+    display: flex;
+    align-items: center;
+    
+    /* Additional styling as needed */
+}
+.sub-header h2 {
+    color:white;
+    padding-left: 150px;
+
+
+}
+.sub-header nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    /* Additional styling as needed */
+}
+
+.sub-header nav ul li a {
+    text-decoration: none;
+    color: black; /* Adjust color as needed */
+    padding: 5px;
+    font-size: 0.9em; /* Smaller font size */
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    padding: 5px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 10px;
+}
+
+/* Main content styles */
+.main-content {
+    padding: 20px;
+    background-color: white;
+    
+}
+.table-container {
+    display: flex;
+    justify-content: space-around; /* Adjust as needed */
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 10px; /* Spacing between tables */
+    /* Add more styling for your tables as needed */
+}
+
+/* Additional styling for table cells, headers, etc. */
+.main-footer th, td {
+    padding: 8px;
+ 
+    text-align: left;
+}
+.main-footer th {
+    border-bottom: 2px solid #000;
+    width: 200px;
+}
+.main-footer th::after {
+    content: ''; 
+    position: absolute;
+    bottom: 0; 
+    height: 2px; 
+    background: #000; 
+    left: 50%; 
+
+}
+.department-info img {
+    display: block;
+    margin-left: 20px;
+    margin-right:0;
+    margin-top: 30px;
+
+}
+.department-info h2{
+    color:#73000a;
+}
+
+/* Container for highlights and the box */
+.content-container {
+    display: flex;
+    align-items: flex-start;
+
     
 }
 
-#main-nav ul, #sub-nav ul {
-    display: flex; /* Align list items horizontally */
-    list-style-type: none; /* Remove bullet points */
-    padding: 0; /* Remove default padding */
-    margin: 0; /* Remove default margin */
-    margin-left: 100px;
-    transform: translateX(200px) translateY(-25px);
-}
-#main-nav li, #sub-nav li {
-    padding:5px; /* Space between menu items */
+/* Highlights container */
+.highlights-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    
+   
 }
 
-#main-nav a, #sub-nav a {
-    text-decoration: none; /* Removes underline */
-    color: white; /* Text color */
-    font-size: 10px; /* Adjust font size */
-
+.highlights {
+    background-color: white;
+    border-bottom: 1px solid grey;
+    padding: 0px;
+    margin-bottom: 20px;
+    width: 50%;
+    margin-left:370px;
+    
+   
+    
 }
-#side-column {
-    position: relative; /* or absolute/fixed, depending on your layout */
-    top: -1700px;
-    left: 80px; /* Adjust the value as needed */
+
+.highlights img {
+    width: 100px;
+    height: auto;
+    
+   
 }
-
-#side-column a {
-    text-decoration: none; 
-    color: black;
-    font-size: 18px;
-    font-weight: 900;
-
-
-
-}
-#side-column li {
-    border-top: 1px solid lightgrey; /* Top border */
-    border-bottom: 1px solid rgb(211, 211, 211); /* Lighter and seemingly thinner bottom border */    
-    width: 15%;
-    padding: 10px;
-    list-style-type: none;
-}
-#side-column ul {
+.highlights-section h3{
+    margin-left: 370px;
    
 
 }
-/* Sub Header Styles */
-.sub-header {
-    background-color: #73000a;
-    color: white;
-    padding-left: 50px;
+.highlights-section p{
+    padding: 0;
 }
-.sub-header h2{
-    padding-left: 108px;
+.text-content  {
+    display: flex;
+    flex-direction: column;
+    padding: -25px;
+    border-bottom: 1px solid grey;
+
+    
+}
+.text-content h4 {
+    color: #73000a;
+    margin-bottom: 0; /* Removes bottom margin */
+    font-size: larger;
+
+}
+
+.text-content p {
+    display: flex;
+    margin-top: 5px; /* Removes top margin */
+    margin-bottom: 10px;
+    font-size: larger;
+   
+
+}
+
+/* Box style */
+.box-container {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: flex-start; /* Align items to the start (left side) */
+    margin-top: 38px;
+    margin-right: 300px;
+    
+}
+
+.box-style, .box-style2 {
+    border: 1px solid lightgrey;
+    padding: 20px;
+    width: 300px; /* Width is the same for both */
+    background-color: #fff;
+    margin-bottom: 20px; /* Space between boxes */
+    border-left: 5px solid #73000a ;
+    
+}
+
+.box-style {
+    height: 250px; /* Height for box 1 */
+    width: 210px;
+    
+}
+
+.box-style2 {
+    height: 500px;
+    width: 250px;
+    padding: 0;
+    background-color: #ECECEC;;
+}
+
+.box-style2 img {
+    width: 250px;
+   
+}
+.box-style2 p , .box-style2 h3{
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+.box-style2 h3{
+    color: #73000a ;
+}
+
+/* Footer styles */
+.sub-footer{
+    height: 55px;
+    background-color: #ECECEC;
+
+}
+.main-footer{
+    height: 300px;
+    text-align: center;
+    padding: 20px;
+    background-color: #73000a ;
+}
+.last-footer{
+    height: 50px;
+    background-color: #000;
 }
 
 /* Media query for responsive adjustments */
-@media only screen and (max-width: 900px) {
-    .flex-container {
-        flex-direction: column;
+    @media only screen and (max-width: 600px) {
+        .main-container, .content-container {
+            margin-left: 0;
+            padding: 10px;
+        }
+    
+        .department-info, .highlights, .box-style, .box-style2 {
+            width: auto;
+            margin-right: 0;
+        }
+    
+        .main-header nav, .sub-header nav ul, nav ul {
+            flex-direction: column;
+        }
+        
+        
     }
-
-    .sidebar,
-    .main-content,
-    .highlights,
-    .dep,
-    #main-img {
-        width: 100%; /* Full width on mobile */
-        margin-left: 0; /* Remove left margin */
-        flex: none; /* Reset flex values */
-    }
-
-    .main-section h2, 
-    .sub-header {
-        padding-left: 20px; /* Adjust padding for smaller screens */
-    }
-
-    .main-header img {
-        width: 100%; /* Full width of header */
-        height: auto;
-    }
-}
+    

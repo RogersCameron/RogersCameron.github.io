@@ -13,6 +13,7 @@ body {
 
 p {
     padding: 0 10px;
+    
 }
 
 .top, #projects {
@@ -44,6 +45,7 @@ p {
 .assignment-container a, .project-container a {
     text-decoration: none;
     color: #011C40;
+    
 }
 
 .assignment-container h4, .project-container h4 {
@@ -60,6 +62,7 @@ p {
 .assignment-container p, .project-container p {
     text-align: left;
     margin-top: 0;
+    font-size: larger;
 }
 
 #main-footer {

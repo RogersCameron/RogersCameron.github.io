@@ -18,9 +18,6 @@ body{
 
 /* Typography */
 
-h1{
-    color: darkslategray;
-}
 
 @media only screen and (min-width: 900px) {
 

@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightgray;
+}
+
+/* Global Styles */
+#content {
+    padding: 0;
+    padding-bottom: 0;
+    width: 100%;
+    margin: auto;
+    border-bottom: 0;
+}
+
+#content img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+}
+
+#nav ul {
+    display: flex;
+    flex-wrap: wrap; /* Allow the nav items to wrap on smaller screens */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#nav li {
+    padding: 10px;
+}
+
+#nav a {
+    text-decoration: none;
+    color: gray;
+}
+
+/* Form Styles */
+.reddit-form {
+    max-width: 100%; /* Full width on smaller screens */
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.reddit-form h2 {
+    text-align: center;
+}
+
+.reddit-form label {
+    display: block;
+    margin-top: 10px;
+}
+
+.reddit-form input[type="text"],
+.reddit-form select,
+.reddit-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.reddit-form textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.reddit-form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: lightgray;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.reddit-form button:hover {
+    background-color: grey;
+}
+
+/* Responsive Styles for Smaller Screens */
+@media only screen and (max-width: 900px) {
+    #nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #nav li {
+        width: 100%; /* Full width for each nav item */
+    }
+}
+
+/* Additional responsive adjustments as needed */

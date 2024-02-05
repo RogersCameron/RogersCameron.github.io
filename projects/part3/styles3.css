@@ -1,0 +1,175 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightgray;
+}
+
+
+/* Structure */
+
+#content{
+    padding:0;
+    padding-bottom: 0;
+    width: 100%;
+    /* center horizontally */
+    margin: auto; 
+    border-bottom: 0;
+    
+
+}
+#content img{
+    width:100%;
+    height: 200px;
+    
+}
+#nav ul{
+    display: flex;
+   list-style: none;
+
+
+}
+#nav li{
+    padding: 10px;
+}
+#nav a{
+    text-decoration: none;
+    color: gray;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+    width: calc(50% - 40px);
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.item img {
+    /* Style for images */
+}
+
+.item p {
+    flex-grow: 1;
+    margin: 0 10px;
+}
+
+.rating-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    background: lightgray;
+}
+
+.container2 {
+    /* Existing styles */
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.line2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.line2 img {
+    margin-right: 20px;
+}
+
+.game-info {
+    margin-right: 20px;
+}
+
+.purchase-button {
+    background-color: grey;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+
+.parent {
+    display: flex;
+    flex-direction: row; /* This is the default value, so it's optional to include */
+    justify-content: space-around; /* Adjusts spacing between the children */
+    /* Add other styling as needed */
+}
+.search-box {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+    width: 500px;
+    margin-top: 15px;
+  
+
+}
+.center-container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+   
+}
+
+.search-input {
+    border: none;
+    padding: 10px;
+    margin-right: 10px;
+    flex-grow: 1;
+}
+.search-button {
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.search-input:focus {
+    outline: none;
+}
+
+/* Typography */
+
+
+
+
+
+
+
+@media only screen and (max-width: 900px) {
+    #content img {
+        height: auto; /* Adjust height for smaller screens */
+    }
+
+    .search-box, .search-input, .search-button {
+        width: 100%;
+    }
+
+    .rating-circle {
+        margin-top: 10px; /* Space above the rating circle */
+    }
+
+    .purchase-button {
+        width: 100%; /* Full width for buttons */
+    }
+
+    .game-info, .item p {
+        text-align: center; /* Center text for readability */
+        margin: 0 0 10px; /* Space below paragraphs and game info */
+    }
+}

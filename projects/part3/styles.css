@@ -1,0 +1,151 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightgray;
+    margin: 0;
+    padding: 0;
+}
+/* Structure */
+
+#content{
+    padding:0;
+    padding-bottom: 0;
+    width: 100%;
+    /* center horizontally */
+    margin: auto; 
+    border-bottom: 0;
+    
+
+}
+#content img{
+    width:100%;
+    height: 200px;
+    
+}
+#nav ul{
+    display: flex;
+   list-style: none;
+
+
+}
+#nav li{
+    padding: 10px;
+}
+#nav a{
+    text-decoration: none;
+    color: gray;
+}
+.container{
+    
+    margin: 20px;
+    padding: 20px;
+    width: calc(50% - 40px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height:500px;
+}
+.container2{
+    margin: 20px;
+    padding: 20px;
+    width: calc(50% - 40px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height:500px;
+}
+
+.parent {
+    display: flex;
+    flex-direction: row; /* This is the default value, so it's optional to include */
+    justify-content: space-around; /* Adjusts spacing between the children */
+    /* Add other styling as needed */
+}
+.search-box {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+    width: 500px;
+    margin-top: 15px;
+  
+
+}
+.center-container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+   
+}
+
+.search-input {
+    border: none;
+    padding: 10px;
+    margin-right: 10px;
+    flex-grow: 1;
+}
+.search-button {
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.search-input:focus {
+    outline: none;
+}
+.search-button:hover {
+    background-color: #026C6C;
+}
+/* Typography */
+.line {
+    display: flex;
+    align-items: center; /* This vertically aligns the items in the middle, which is optional */
+    justify-content: space-between; /* This adds space between the text and the image */
+}
+
+.line p {
+    margin-right: 20px; /* Add some space between the text and the image */
+    flex: 1; /* Allows the paragraph to take up the available space */
+}
+
+.line img {
+    /* You can add specific styling to the image if needed */
+}
+.line2 {
+    margin-bottom: 20px; /* Space between each line2 section */
+}
+
+.line2 img {
+    width: 400px; /* Sets the image width to 50% of its container */
+    display: block; /* Ensures the image is treated as a block-level element */
+    margin-left: auto; /* Auto margin on the left */
+    margin-right: auto; /* Auto margin on the right */
+    margin-bottom: 10px; /* Space below the image */
+}
+
+
+.line2 p {
+    width: 80%; /* Adjust the width as necessary */
+    margin: 0 auto; /* Centers the paragraph and removes default margin */
+}
+
+
+@media only screen and (max-width: 900px) {
+   .parent{
+    display: flex;
+    flex-direction: column;
+   }
+   .container{
+    flex-direction: column;
+    display: flex;
+   }
+   .container2{
+    flex-direction: column;
+    display: flex;
+   }
+   .center-container{
+    flex-direction: column;
+    display: flex;
+   }
+
+}

@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#content h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#nav ul {
+    display: flex;
+    list-style: none;
+}
+
+#nav li {
+    padding: 10px;
+}
+
+#nav a {
+    text-decoration: none;
+    color: gray;
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.left-column img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+.right-content {
+    flex-grow: 1;
+    max-width: 800px;
+}
+
+.right-content .main-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.right-content p {
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+/* Responsive Styles for Small Screens */
+@media only screen and (max-width: 900px) {
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-column {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    /* Removed the resizing of .left-column img for smaller screens */
+
+    .right-content {
+        max-width: 100%;
+    }
+    .left-column img {
+        width: 530px;
+        height: 400px;
+    }
+    
+}
+
+/* Additional styles for header, footer, and typography as needed */

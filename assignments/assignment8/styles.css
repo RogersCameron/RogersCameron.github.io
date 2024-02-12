@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: grey;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px; /* Added padding to body to ensure some spacing around .container */
+}
+
+.container {
+    max-width: 300px;
+    height: 500px;
+    border: 2px solid grey;
+    padding: 10px;
+    margin: 10px auto; /* This already centers the container horizontally */
+    background-color: navy;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers child elements of .container */
+}
+
+
+.column{
+    width: 100%;
+   
+}
+.column h1{
+    text-align: center;
+}
+
+
+.textbox-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%; /* Ensures the wrapper takes the full width */
+}
+
+#textbox {
+    height: 30px;
+    width: 80%; /* Or fixed width as needed */
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.image-con{
+    align-self: center;
+    max-width: 300px;
+   
+}
+.image-con img{
+    width: 50%;
+    margin-top: 20px;
+    margin-left: 80px;
+
+    
+}
+#squareRangeSlider {
+    -webkit-appearance: none; 
+    width: 100%; /* Full-width */
+    height: 10px; /* Height of the track */
+    background: #ddd; /* Background color */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Partial transparency */
+    transition: opacity 0.2s; /* Transition for hover effect */
+}
+#squareRangeSlider::-webkit-slider-thumb {
+    -webkit-appearance: none; 
+    appearance: none;
+    width: 20px; 
+    height: 20px;
+    background: grey; 
+    cursor: pointer; 
+}
+#squareRangeSlider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: grey; 
+    cursor: pointer; 
+    border: 1px solid #333; 
+}
+header a {
+    text-decoration: none; /* Removes underline */
+    color: black; /* Sets text color, adjust as needed */
+    /* Optional: Adjusts spacing around the links */
+}
+
+
+
+header a:hover {
+    color: grey; /* Change color on hover for visual feedback */
+}
+
+
+header a:hover {
+    color: darkgrey; /* Example hover color, adjust as needed */
+}
+.header-content{   
+    text-align: center;
+}
+#textbox{
+    display: none;
+}
+#squareRangeSlider{
+    display: none;
+}
+
+/* Typography */
+
+
+@media only screen and (min-width: 600px) {
+   
+    #hamburger-menu {
+        display: none; /* Hide hamburger menu on larger screens */
+    }
+
+
+
+
+
+}

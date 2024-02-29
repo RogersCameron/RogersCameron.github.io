@@ -1,0 +1,27 @@
+.tree-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .tree-box {
+    flex: 1; /* Makes each box take equal space */
+    padding: 10px; /* Adds some space around the image */
+    background-color: grey;
+    height: 400px;
+    margin-left:10px ;
+
+  }
+  
+  .tree-box img {
+    width: 100%; /* Makes image fill the box */
+    height: auto; /* Keeps image aspect ratio */
+    display: block; /* Removes bottom space under the image */
+  }
+  
+  #tree-container{
+    text-align: center;
+  }
+main{
+    text-align: center;
+}

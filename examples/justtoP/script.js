@@ -1,7 +1,7 @@
-let tree = "oak";
-let student = false;
+let username;
 
-consloe.log(student);
-console.log(tree);
-
-document.getElementById("this1").innerHTML = "Hello" + tree;
+document.getElementById("myButton").onclick = function(){
+    
+    username = document.getElementById("myText").value;
+    document.getElementById("myLabel").innerHTML = username;
+};

@@ -2,26 +2,47 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  
-  .tree-box {
-    flex: 1; /* Makes each box take equal space */
-    padding: 10px; /* Adds some space around the image */
-    background-color: grey;
-    height: 400px;
-    margin-left:10px ;
+}
 
-  }
-  
-  .tree-box img {
-    width: 100%; /* Makes image fill the box */
-    height: auto; /* Keeps image aspect ratio */
-    display: block; /* Removes bottom space under the image */
-  }
-  
-  #tree-container{
+.tree-box {
+    flex: 1; /* Makes each box take equal space */
+    padding-left: 10px; /* Adds some space around the image */
+    height: 400px;
+    margin-left: 10px;
+    background-color: grey;
+}
+
+.tree-image {
+    width: 300px; /* Adjust the width as needed */
+    height: auto; /* Keeps the aspect ratio intact */
+}
+
+#treeGallery {
+    display: flex;
+}
+main {
     text-align: center;
-  }
-main{
-    text-align: center;
+}
+.info-box {
+    position: fixed; /* Or absolute, depending on your layout */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    color: black;
+    padding: 20px;
+    z-index: 1000; /* Ensure it's above other content */
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.close-btn {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
 }

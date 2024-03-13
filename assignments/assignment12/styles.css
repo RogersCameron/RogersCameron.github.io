@@ -1,9 +1,62 @@
-h1 {
-    text-align: center;
-}
 body {
-    background-color: palevioletred;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4;
+}
+
+#house-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.house-item {
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.house-img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #333; /* Add a border around the image */
+    border-radius: 5px;
+}
+
+.house-details {
+    padding: 10px;
+}
+
+h3 {
+    color: #333;
+}
+
+p {
+    color: #666;
+}
+
+.main-img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #333; /* Add a border around the main image */
+    border-radius: 5px;
+}
+
+.floor-plan-container {
+    display: flex;
+    flex-direction: column; /* Display floor plan name and image vertically */
+    align-items: center; /* Center align items horizontally */
+}
+
+.floor-plan-img {
+    width: 315px; /* Adjust the size of the floor plan images as needed */
+    height: auto;
+    margin-top: 10px; /* Add some space between floor plan name and image */
+    border: 2px solid #333; /* Add a border around the image */
+    border-radius: 5px;
 }

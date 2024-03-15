@@ -1,0 +1,233 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* Dark background */
+}
+
+nav {
+    background-color: #1F1B24; /* Darker shade for the nav */
+    color: #FFFFFF; /* White text for contrast */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+}
+
+.logo h1 {
+    margin: 0;
+    color: orangered; /* Bright accent color for branding */
+}
+
+
+
+/* Keyframes for typing and blink-cursor animations */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-cursor {
+    from, to { border-color: transparent; }
+    50% { border-color: black; }
+}
+
+#typing-logo {
+    font-family: 'Courier New', monospace;
+    overflow: hidden;
+    border-right: .15em solid black;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: typing 3.5s steps(30, end), blink-cursor .75s step-end infinite;
+}
+#game-pulse-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1F1B24;
+    color: #ffffff;
+    padding: 0 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    position: absolute;
+    margin-left: 500px;
+}
+
+.nav-links li {
+    padding: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    background: orangered;
+    transition: width .3s;
+    
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.hamburger {
+    display: none; /* Initially hide the hamburger menu */
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 25px; /* Adjust based on your design */
+    width: 30px;
+}
+
+.line {
+    display: block; /* Make sure lines are block-level elements */
+    width: 100%;
+    height: 3px;
+    background-color: orangered; /* This makes the lines white */
+}
+.reviews-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.game-review {
+    background-color: #1E1E1E;
+    color: #FFF;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.game-thumbnail {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.review-content h3 {
+    margin: 10px 0;
+}
+
+.review-score {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: orangered;
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    margin-top: 10px;
+    position: relative;
+}
+
+.review-score::before {
+    content: attr(data-score) '%';
+    position: absolute;
+}
+#new-releases {
+    margin: 20px 0;
+    color: #FFF;
+}
+
+.new-releases-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.new-release {
+    background-color: #1E1E1E;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.new-game-thumbnail {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensure images cover the area nicely */
+}
+
+.new-release-content {
+    padding: 15px;
+}
+
+.purchase-button {
+    display: inline-block;
+    background-color: orangered;
+    color: #FFF;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.purchase-button:hover {
+    background-color: #e67e22; /* Slightly darker or lighter for hover effect */
+}
+
+
+/* Dynamic styling for the review score based on its value might require JavaScript */
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    section {
+        width: 100%;
+    }
+
+    .logo {
+        position: relative; /* Adjust if necessary */
+        z-index: 3; /* Higher than the hamburger and nav-links to prevent cut-off */
+        text-align: center; /* Center-align the logo */
+    }
+
+    .logo h1 {
+        font-size: 20px; /* Adjust the font size for small screens */
+    }
+    .hamburger {
+        display: flex; /* Show the hamburger menu on smaller screens */
+    }
+
+    .nav-links {
+        position: absolute;
+        right: 0;
+        top: 60px; /* Adjust based on the height of your nav bar */
+        background-color: #1F1B24; /* Same as nav background */
+        flex-direction: column;
+        align-items: center;
+        width: 100%; /* Full width */
+        display: none; /* Initially hide the nav links */
+        transition: transform 0.3s ease-in;
+        gap: 20px;
+    
+    
+    }
+
+    .nav-links.active {
+        display: flex; /* Show nav links when active */
+        transform: translateX(0); /* Ensure it slides in correctly */
+    }
+   
+   
+}

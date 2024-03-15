@@ -1,107 +1,235 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Pulse - Game Reviews</title>
-    <link rel="stylesheet" href="styles3.css">
-</head>
-<body>
-    <nav id="game-pulse-nav">
-        <div class="logo">
-            <h1 id="typing-logo"></h1>
-        </div>
-        <ul class="nav-links">
-            <li><a href="https://rogerscameron.github.io/projects/part4/index.html">Home</a></li>
-            <li><a href="https://rogerscameron.github.io/projects/part4/page2.html">News</a></li>
-            <li><a href="https://rogerscameron.github.io/projects/part4/page3.html">Reviews</a></li>
-            <li><a href="https://rogerscameron.github.io/projects/part4/page4.html">Chat</a></li>
-        </ul>
-        <div class="hamburger">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </div>
-       
-    </nav>
-    <main>
-        <section id="review-section">
-            
-            <div class="reviews-container">
-                <!-- Example Review -->
-                <div class="game-review">
-                    <img src="images/Helldivers.jpeg" alt="Game Thumbnail" class="game-thumbnail">
-                    <div class="review-content">
-                        <h3>Helldivers 2</h3>
-                        <p>Helldivers 2" is praised for its co-op shooter gameplay mixed with comedy, where teamwork, strategy, and the use of Stratagems play a critical role in overcoming challenges. The game emphasizes coordination and the clever use of resources in battles against various enemy types, offering a variety of missions and environments. Its humor, alongside the strategic depth and co-op design, makes it a standout experience, especially for those seeking a fun, cooperative game​ </p>
-                        <div class="review-score" data-score="90"></div> <!-- Review Score Wheel Placeholder -->
-                    </div>
-                </div>
-                <div class="game-review">
-                    <img src="images/starwars.jpeg" alt="Game Thumbnail" class="game-thumbnail">
-                    <div class="review-content">
-                        <h3>StarWars Outlaws</h3>
-                        <p>Star Wars Outlaws" is set between "The Empire Strikes Back" and "Return of the Jedi," offering an open-world adventure as Kay Vess. Developed by Ubisoft Massive, the game features vast environments, seamless land-to-space travel, and a dynamic Wanted system. A faction reputation system influences the world based on your choices, shaping missions and interactions.</p>
-                        <div class="review-score" data-score="85"></div> <!-- Review Score Wheel Placeholder -->
-                    </div>
-                </div>
-                <div class="game-review">
-                    <img src="images/Goh.jpeg" alt="Game Thumbnail" class="game-thumbnail">
-                    <div class="review-content">
-                        <h3>Banishers: Ghost Of New Eden</h3>
-                        <p>Banishers: Ghosts of New Eden presents a deeply emotional and narrative-driven action adventure, set in a world where players take on the roles of Red and Antea, a duo of ghost hunters navigating the challenges of love, loss, and the ethical dilemmas of dealing with the supernatural.The game intricately combines detective work and combat, where players unravel haunting mysteries and make choices that significantly impact the story and world around them.  </p>
-                        <div class="review-score" data-score="85"></div> <!-- Review Score Wheel Placeholder -->
-                    </div>
-                </div>
-                <div class="game-review">
-                    <img src="images/t2.avif" alt="Game Thumbnail" class="game-thumbnail">
-                    <div class="review-content">
-                        <h3>Tekken 8</h3>
-                        <p>Tekken 8" is celebrated for its evolution, offering an array of single-player content, excellent training tools, and a great online experience. The game introduces new mechanics that heighten the excitement of matches, including the Heat System for dynamic battle shifts.The roster includes 32 diverse characters, both returning and new, each with unique moves and customization options.</p>
-                        <div class="review-score" data-score="95"></div> <!-- Review Score Wheel Placeholder -->
-                    </div>
-                </div>
-                <div class="game-review">
-                    <img src="images/skull.jpeg" alt="Game Thumbnail" class="game-thumbnail">
-                    <div class="review-content">
-                        <h3>Skull and Bone</h3>
-                        <p>Skull and Bones" is praised for its immersive naval combat and extensive ship customization, creating a compelling experience for fans of high-seas adventures. However, it primarily focuses on naval warfare, lacking character-focused action like sword fighting. The game features a variety of activities, including crafting, which is a significant part of gameplay. While it may not fulfill all aspects of the pirate fantasy, it offers an engaging experience for those interested in naval battles​</p>
-                        <div class="review-score" data-score="70"></div> <!-- Review Score Wheel Placeholder -->
-                    </div>
-                </div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Game Pulse - Game Reviews</title>
+        <link rel="stylesheet" href="styles3.css" />
+    </head>
+    <body>
+        <nav id="game-pulse-nav">
+            <div class="logo">
+                <h1 id="typing-logo"></h1>
             </div>
-        </section>
-        <section id="new-releases">
-            <h2>New Releases</h2>
-            <div class="new-releases-container">
-                <div class="new-release">
-                    <img src="images/mar.avif" alt="New Game Thumbnail" class="new-game-thumbnail">
-                    <div class="new-release-content">
-                        <h3>Mario vs Donkey Kong</h3>
-                        <p>You can purchase "Mario vs. Donkey Kong" for the Nintendo Switch directly from the Nintendo Official Site.</p>
-                        <a href="link/to/purchase" class="purchase-button">Purchase</a>
-                    </div>
-                </div>
-                <div class="new-release">
-                    <img src="images/drive.jpeg" alt="New Game Thumbnail" class="new-game-thumbnail">
-                    <div class="new-release-content">
-                        <h3>Pacific Drive</h3>
-                        <p>You can purchase "Pacific Drive" on Steam where it's currently available with a 10% discount.</p>
-                        <a href="link/to/purchase" class="purchase-button">Purchase</a>
-                    </div>
-                </div>
-                <div class="new-release">
-                    <img src="images/Spiderman-2.webp" alt="New Game Thumbnail" class="new-game-thumbnail">
-                    <div class="new-release-content">
-                        <h3>Spider-Man 2</h3>
-                        <p>You can purchase "Marvel’s Spider-Man 2" for PS5 from the PlayStation Store.</p>
-                        <a href="link/to/purchase" class="purchase-button">Purchase</a>
-                    </div>
-                </div>
-               
+            <ul class="nav-links">
+                <li>
+                    <a
+                        href="https://rogerscameron.github.io/projects/part4/index.html"
+                        >Home</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="https://rogerscameron.github.io/projects/part4/page2.html"
+                        >News</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="https://rogerscameron.github.io/projects/part4/page3.html"
+                        >Reviews</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="https://rogerscameron.github.io/projects/part4/page4.html"
+                        >Chat</a
+                    >
+                </li>
+            </ul>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
             </div>
-        </section>
-    </main>
-    <script src="script.js"></script>
-</body>
+        </nav>
+        <main>
+            <section id="review-section">
+                <div class="reviews-container">
+                    <!-- Example Review -->
+                    <div class="game-review">
+                        <img
+                            src="images/Helldivers.jpeg"
+                            alt="Game Thumbnail"
+                            class="game-thumbnail"
+                        />
+                        <div class="review-content">
+                            <h3>Helldivers 2</h3>
+                            <p>
+                                Helldivers 2" is praised for its co-op shooter
+                                gameplay mixed with comedy, where teamwork,
+                                strategy, and the use of Stratagems play a
+                                critical role in overcoming challenges. The game
+                                emphasizes coordination and the clever use of
+                                resources in battles against various enemy
+                                types, offering a variety of missions and
+                                environments. Its humor, alongside the strategic
+                                depth and co-op design, makes it a standout
+                                experience, especially for those seeking a fun,
+                                cooperative game​
+                            </p>
+                            <div class="review-score" data-score="90"></div>
+                            <!-- Review Score Wheel Placeholder -->
+                        </div>
+                    </div>
+                    <div class="game-review">
+                        <img
+                            src="images/starwars.jpeg"
+                            alt="Game Thumbnail"
+                            class="game-thumbnail"
+                        />
+                        <div class="review-content">
+                            <h3>StarWars Outlaws</h3>
+                            <p>
+                                Star Wars Outlaws" is set between "The Empire
+                                Strikes Back" and "Return of the Jedi," offering
+                                an open-world adventure as Kay Vess. Developed
+                                by Ubisoft Massive, the game features vast
+                                environments, seamless land-to-space travel, and
+                                a dynamic Wanted system. A faction reputation
+                                system influences the world based on your
+                                choices, shaping missions and interactions.
+                            </p>
+                            <div class="review-score" data-score="85"></div>
+                            <!-- Review Score Wheel Placeholder -->
+                        </div>
+                    </div>
+                    <div class="game-review">
+                        <img
+                            src="images/Goh.jpeg"
+                            alt="Game Thumbnail"
+                            class="game-thumbnail"
+                        />
+                        <div class="review-content">
+                            <h3>Banishers: Ghost Of New Eden</h3>
+                            <p>
+                                Banishers: Ghosts of New Eden presents a deeply
+                                emotional and narrative-driven action adventure,
+                                set in a world where players take on the roles
+                                of Red and Antea, a duo of ghost hunters
+                                navigating the challenges of love, loss, and the
+                                ethical dilemmas of dealing with the
+                                supernatural.The game intricately combines
+                                detective work and combat, where players unravel
+                                haunting mysteries and make choices that
+                                significantly impact the story and world around
+                                them.
+                            </p>
+                            <div class="review-score" data-score="85"></div>
+                            <!-- Review Score Wheel Placeholder -->
+                        </div>
+                    </div>
+                    <div class="game-review">
+                        <img
+                            src="images/t2.avif"
+                            alt="Game Thumbnail"
+                            class="game-thumbnail"
+                        />
+                        <div class="review-content">
+                            <h3>Tekken 8</h3>
+                            <p>
+                                Tekken 8" is celebrated for its evolution,
+                                offering an array of single-player content,
+                                excellent training tools, and a great online
+                                experience. The game introduces new mechanics
+                                that heighten the excitement of matches,
+                                including the Heat System for dynamic battle
+                                shifts.The roster includes 32 diverse
+                                characters, both returning and new, each with
+                                unique moves and customization options.
+                            </p>
+                            <div class="review-score" data-score="95"></div>
+                            <!-- Review Score Wheel Placeholder -->
+                        </div>
+                    </div>
+                    <div class="game-review">
+                        <img
+                            src="images/skull.jpeg"
+                            alt="Game Thumbnail"
+                            class="game-thumbnail"
+                        />
+                        <div class="review-content">
+                            <h3>Skull and Bone</h3>
+                            <p>
+                                Skull and Bones" is praised for its immersive
+                                naval combat and extensive ship customization,
+                                creating a compelling experience for fans of
+                                high-seas adventures. However, it primarily
+                                focuses on naval warfare, lacking
+                                character-focused action like sword fighting.
+                                The game features a variety of activities,
+                                including crafting, which is a significant part
+                                of gameplay. While it may not fulfill all
+                                aspects of the pirate fantasy, it offers an
+                                engaging experience for those interested in
+                                naval battles​
+                            </p>
+                            <div class="review-score" data-score="70"></div>
+                            <!-- Review Score Wheel Placeholder -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="new-releases">
+                <h2>New Releases</h2>
+                <div class="new-releases-container">
+                    <div class="new-release">
+                        <img
+                            src="images/mar.avif"
+                            alt="New Game Thumbnail"
+                            class="new-game-thumbnail"
+                        />
+                        <div class="new-release-content">
+                            <h3>Mario vs Donkey Kong</h3>
+                            <p>
+                                You can purchase "Mario vs. Donkey Kong" for the
+                                Nintendo Switch directly from the Nintendo
+                                Official Site.
+                            </p>
+                            <a
+                                href="https://www.gamestop.com/video-games/nintendo-switch/products/mario-vs.-donkey-kong---nintendo-switch/404300.html"
+                                class="purchase-button"
+                                >Purchase</a
+                            >
+                        </div>
+                    </div>
+                    <div class="new-release">
+                        <img
+                            src="images/drive.jpeg"
+                            alt="New Game Thumbnail"
+                            class="new-game-thumbnail"
+                        />
+                        <div class="new-release-content">
+                            <h3>Pacific Drive</h3>
+                            <p>
+                                You can purchase "Pacific Drive" on Steam where
+                                it's currently available with a 10% discount.
+                            </p>
+                            <a href="link/to/purchase" class="purchase-button"
+                                >Purchase</a
+                            >
+                        </div>
+                    </div>
+                    <div class="new-release">
+                        <img
+                            src="images/Spiderman-2.webp"
+                            alt="New Game Thumbnail"
+                            class="new-game-thumbnail"
+                        />
+                        <div class="new-release-content">
+                            <h3>Spider-Man 2</h3>
+                            <p>
+                                You can purchase "Marvel’s Spider-Man 2" for PS5
+                                from the PlayStation Store.
+                            </p>
+                            <a href="link/to/purchase" class="purchase-button"
+                                >Purchase</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <script src="script.js"></script>
+    </body>
 </html>

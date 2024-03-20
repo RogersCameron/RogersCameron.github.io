@@ -20,7 +20,69 @@ nav {
     color: orangered; /* Bright accent color for branding */
 }
 
+#contact-form, #data-entry-form {
+    max-width: 600px; /* Maximum width of the form */
+    margin: 20px auto; /* Center the form on the page */
+    padding: 20px;
+    background-color: #f8f9fa; /* Light grey background */
+    border-radius: 8px; /* Rounded corners for the form */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
 
+#contact-form h2, #data-entry-form h2 {
+    color: #333; /* Dark grey color for the heading */
+    margin-bottom: 20px;
+}
+
+#contact-form label, #data-entry-form label {
+    display: block; /* Ensure the label is on its own line */
+    margin-bottom: 5px; /* Space between the label and input field */
+    color: #555; /* Slightly darker grey for the label text */
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#data-entry-form input[type="text"],
+#data-entry-form input[type="email"],
+#data-entry-form input[type="date"],
+#contact-form textarea,
+#data-entry-form textarea {
+    width: 100%; /* Ensure input fields take up the full width of the form container */
+    padding: 10px; /* Padding inside the input fields */
+    border: 1px solid #ccc; /* Light grey border around the input fields */
+    border-radius: 4px; /* Slightly rounded corners for the input fields */
+    box-sizing: border-box; /* Ensures padding does not add to the total width */
+}
+
+#contact-form textarea, #data-entry-form textarea {
+    height: 150px; /* Set a fixed height for the textarea */
+    resize: none; /* Prevent resizing of the textarea */
+}
+
+#contact-form button, #data-entry-form button {
+    width: 100%; /* Button occupies the full form width */
+    padding: 10px 0; /* Padding inside the button */
+    background-color: #007bff; /* Bootstrap primary button color */
+    color: #fff; /* White text on the button */
+    border: none; /* No border for the button */
+    border-radius: 4px; /* Slightly rounded corners for the button */
+    cursor: pointer; /* Cursor changes to pointer to indicate clickable */
+    font-size: 16px; /* Slightly larger font size for better readability */
+}
+
+#contact-form button:hover, #data-entry-form button:hover {
+    background-color: #0056b3; /* Darker shade of blue on hover for the button */
+}
+
+#contact-response, #data-entry-response {
+    margin-top: 20px; /* Space above the response message */
+    color: #28a745; /* Success color */
+    font-weight: bold; /* Make the message bold */
+}
+
+#contact-response.error, #data-entry-response.error {
+    color: #dc3545; /* Error color, assuming you might need it */
+}
 
 /* Keyframes for typing and blink-cursor animations */
 @keyframes typing {
@@ -79,7 +141,10 @@ nav {
     transition: width .3s;
     
 }
-
+#items-list{
+    color: white;
+    
+}
 .nav-links a:hover::after {
     width: 100%;
 }
@@ -147,6 +212,59 @@ nav {
 .reddit-form button:hover {
     background-color: grey;
 }
+form {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    background: #f3f3f3;
+    border-radius: 8px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#form-response {
+    text-align: center;
+    padding: 12px;
+    margin-top: 15px;
+}
+.map-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 75%; /* Adjusts the aspect ratio */
+    height: 0;
+  }
+  
+  .map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
 
 @media (max-width: 768px) {
     main {

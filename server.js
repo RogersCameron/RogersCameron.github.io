@@ -11,6 +11,7 @@ app.use((err, req, res, next) => {
   res.status(500).send('Something broke!');
 });
 app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'final')));
 app.use(express.json());
 app.use(cors());
 
@@ -39,6 +40,24 @@ const Game = mongoose.model('Game', gameSchema);
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
+});
+
+app.get('/page2', (req, res) => {
+  res.sendFile(path.join(__dirname, 'final', 'page2.html'));
+});
+
+// Serve page3.html
+app.get('/page3', (req, res) => {
+  res.sendFile(path.join(__dirname, 'final', 'page3.html'));
+});
+
+// Serve page4.html
+app.get('/page4', (req, res) => {
+  res.sendFile(path.join(__dirname, 'final', 'page4.html'));
+});
+
+app.get('/list', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 app.get('/api/videogames', async (req, res) => {

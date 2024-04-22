@@ -38,7 +38,7 @@ const gameSchema = new mongoose.Schema({
 const Game = mongoose.model('Game', gameSchema);
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/final/page5.html');
+    res.sendFile(__dirname + '/index.html');
 });
 
 app.get('/api/videogames', async (req, res) => {

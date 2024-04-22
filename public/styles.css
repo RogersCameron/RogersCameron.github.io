@@ -1,14 +1,16 @@
 :root {
-    --primary-color: #007bff; /* Primary color for your theme */
-    --hover-color: #0056b3; /* Darker shade for hover states */
+    --primary-color: orangered; /* Vivid orange-red as the primary color */
+    --hover-color: #e63900; /* A slightly darker shade for hover states */
     --text-color: #333; /* Main text color for better readability */
     --background-color: #f4f4f4; /* Light background to keep it airy */
     --modal-background: #ffffff; /* Background color for modals */
     --shadow-color: rgba(0, 0, 0, 0.2); /* Shadow color for depth */
 }
+
 .w3-button.w3-display-topright {
     color: black !important; /* Always black, overriding other styles */
 }
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -16,12 +18,9 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
 }
-.edit-game-btn {
-    margin-right: 10px; /* Adjust the value as needed */
-}
 
 .edit-game-btn, .delete-game-btn {
-    margin-right: 10px;
+    margin-right: 10px; /* Uniform right margin for buttons */
 }
 
 header {
@@ -49,7 +48,7 @@ header a {
 }
 
 header a:hover {
-    background-color: #004494;
+    background-color: #cc5200; /* Darker shade for hover effect */
 }
 
 .columns {
@@ -117,7 +116,7 @@ header a:hover {
 #artwork-prev {
     max-width: 100px;
     margin-top: 10px;
-    border-radius: 5px; /* Added border-radius */
+    border-radius: 5px;
 }
 
 button, .edit-game-btn, .delete-game-btn {
@@ -127,7 +126,7 @@ button, .edit-game-btn, .delete-game-btn {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-   margin-left: 200px;
+    margin-left: 200px;
 }
 
 button:hover, .edit-game-btn:hover, .delete-game-btn:hover {
@@ -148,27 +147,7 @@ button:hover, .edit-game-btn:hover, .delete-game-btn:hover {
     max-width: 50%;
     display: block;
     margin: 10px auto;
-    border-radius: 5px; /* Soften the edges */
-}
-
-.edit-game-btn, .delete-game-btn {
-    margin: 10px 5px; /* Adjust spacing */
-}
-
-.edit-game-btn {
-    background-color: #4CAF50; /* Green */
-}
-
-.delete-game-btn {
-    background-color: red; /* Red */
-}
-
-.edit-game-btn:hover {
-    background-color: #45a049;
-}
-
-.delete-game-btn:hover {
-    background-color: #d32f2f;
+    border-radius: 5px;
 }
 
 .game-actions {
@@ -186,3 +165,4 @@ button:hover, .edit-game-btn:hover, .delete-game-btn:hover {
         width: 90% !important; /* Override w3.css settings for smaller screens */
     }
 }
+

@@ -249,7 +249,7 @@ nav {
     .w3-modal-content {
         width: 90% !important; /* Override w3.css settings for smaller screens */
     }
-    .nav-links {
+      .nav-links {
         position: absolute;
         right: 0;
         top: 60px; /* Adjust based on the height of your nav bar */

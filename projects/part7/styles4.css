@@ -1,0 +1,312 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* Dark background */
+}
+
+nav {
+    background-color: #1F1B24; /* Darker shade for the nav */
+    color: #FFFFFF; /* White text for contrast */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+}
+
+.logo h1 {
+    margin: 0;
+    color: orangered; /* Bright accent color for branding */
+}
+
+#contact-form, #data-entry-form {
+    max-width: 600px; /* Maximum width of the form */
+    margin: 20px auto; /* Center the form on the page */
+    padding: 20px;
+    background-color: #f8f9fa; /* Light grey background */
+    border-radius: 8px; /* Rounded corners for the form */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+#contact-form h2, #data-entry-form h2 {
+    color: #333; /* Dark grey color for the heading */
+    margin-bottom: 20px;
+}
+
+#contact-form label, #data-entry-form label {
+    display: block; /* Ensure the label is on its own line */
+    margin-bottom: 5px; /* Space between the label and input field */
+    color: #555; /* Slightly darker grey for the label text */
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#data-entry-form input[type="text"],
+#data-entry-form input[type="email"],
+#data-entry-form input[type="date"],
+#contact-form textarea,
+#data-entry-form textarea {
+    width: 100%; /* Ensure input fields take up the full width of the form container */
+    padding: 10px; /* Padding inside the input fields */
+    border: 1px solid #ccc; /* Light grey border around the input fields */
+    border-radius: 4px; /* Slightly rounded corners for the input fields */
+    box-sizing: border-box; /* Ensures padding does not add to the total width */
+}
+
+#contact-form textarea, #data-entry-form textarea {
+    height: 150px; /* Set a fixed height for the textarea */
+    resize: none; /* Prevent resizing of the textarea */
+}
+
+#contact-form button, #data-entry-form button {
+    width: 100%; /* Button occupies the full form width */
+    padding: 10px 0; /* Padding inside the button */
+    background-color: #007bff; /* Bootstrap primary button color */
+    color: #fff; /* White text on the button */
+    border: none; /* No border for the button */
+    border-radius: 4px; /* Slightly rounded corners for the button */
+    cursor: pointer; /* Cursor changes to pointer to indicate clickable */
+    font-size: 16px; /* Slightly larger font size for better readability */
+}
+
+#contact-form button:hover, #data-entry-form button:hover {
+    background-color: #0056b3; /* Darker shade of blue on hover for the button */
+}
+
+#contact-response, #data-entry-response {
+    margin-top: 20px; /* Space above the response message */
+    color: #28a745; /* Success color */
+    font-weight: bold; /* Make the message bold */
+}
+
+#contact-response.error, #data-entry-response.error {
+    color: #dc3545; /* Error color, assuming you might need it */
+}
+
+/* Keyframes for typing and blink-cursor animations */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-cursor {
+    from, to { border-color: transparent; }
+    50% { border-color: black; }
+}
+
+#typing-logo {
+    font-family: 'Courier New', monospace;
+    overflow: hidden;
+    border-right: .15em solid black;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: typing 3.5s steps(30, end), blink-cursor .75s step-end infinite;
+}
+#game-pulse-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1F1B24;
+    color: #ffffff;
+    padding: 0 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    position: absolute;
+    margin-left: 500px;
+}
+
+.nav-links li {
+    padding: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    background: orangered;
+    transition: width .3s;
+    
+}
+#items-list{
+    color: white;
+    
+}
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.hamburger {
+    display: none; /* Initially hide the hamburger menu */
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 25px; /* Adjust based on your design */
+    width: 30px;
+}
+
+.line {
+    display: block; /* Make sure lines are block-level elements */
+    width: 100%;
+    height: 3px;
+    background-color: orangered; /* This makes the lines white */
+}
+.reddit-form {
+    max-width: 80%; /* Full width on smaller screens */
+    margin: 20px auto;
+    padding: 20px;
+    background-color: darkgray;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.reddit-form h2 {
+    text-align: center;
+}
+
+.reddit-form label {
+    display: block;
+    margin-top: 10px;
+}
+
+.reddit-form input[type="text"],
+.reddit-form select,
+.reddit-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.reddit-form textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.reddit-form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: lightgray;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.reddit-form button:hover {
+    background-color: grey;
+}
+form {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    background: #f3f3f3;
+    border-radius: 8px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#form-response {
+    text-align: center;
+    padding: 12px;
+    margin-top: 15px;
+}
+.map-container {
+    position: relative;
+    width: 50%; /* Reduce the width or adjust as needed for your design */
+    padding-bottom: 25%; /* Decrease the padding-bottom to reduce the height */
+    height: 0;
+    margin: 20px auto; /* Center the map and provide some spacing */
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    section {
+        width: 100%;
+    }
+
+    .logo {
+        position: relative; /* Adjust if necessary */
+        z-index: 3; /* Higher than the hamburger and nav-links to prevent cut-off */
+        text-align: center; /* Center-align the logo */
+    }
+
+    .logo h1 {
+        font-size: 20px; /* Adjust the font size for small screens */
+    }
+    .hamburger {
+        display: flex; /* Show the hamburger menu on smaller screens */
+    }
+
+    .nav-links {
+        position: absolute;
+        right: 0;
+        top: 60px; /* Adjust based on the height of your nav bar */
+        background-color: #1F1B24; /* Same as nav background */
+        flex-direction: column;
+        align-items: center;
+        width: 100%; /* Full width */
+        display: none; /* Initially hide the nav links */
+        transition: transform 0.3s ease-in;
+        gap: 20px;
+    
+    
+    }
+
+    .nav-links.active {
+        display: flex; /* Show nav links when active */
+        transform: translateX(0); /* Ensure it slides in correctly */
+    }
+   
+   
+}

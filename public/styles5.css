@@ -177,6 +177,69 @@ button:hover, .edit-game-btn:hover, .delete-game-btn:hover {
     padding-bottom: 20px;
 }
 
+nav {
+    background-color: #1F1B24; /* Darker shade for the nav */
+    color: #FFFFFF; /* White text for contrast */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+}
+#typing-logo {
+    font-family: 'Courier New', monospace;
+    overflow: hidden;
+    border-right: .15em solid black;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: typing 3.5s steps(30, end), blink-cursor .75s step-end infinite;
+}
+#game-pulse-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1F1B24;
+    color: #ffffff;
+    padding: 0 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    position: absolute;
+    margin-left: 500px;
+}
+
+.nav-links li {
+    padding: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    background: orangered;
+    transition: width .3s;
+    
+}
+#items-list{
+    color: white;
+    
+}
+.nav-links a:hover::after {
+    width: 100%;
+}
+
 /* Responsive layout adjustments */
 @media (max-width: 600px) {
     .columns {
@@ -185,5 +248,24 @@ button:hover, .edit-game-btn:hover, .delete-game-btn:hover {
 
     .w3-modal-content {
         width: 90% !important; /* Override w3.css settings for smaller screens */
+    }
+    .nav-links {
+        position: absolute;
+        right: 0;
+        top: 60px; /* Adjust based on the height of your nav bar */
+        background-color: #1F1B24; /* Same as nav background */
+        flex-direction: column;
+        align-items: center;
+        width: 100%; /* Full width */
+        display: none; /* Initially hide the nav links */
+        transition: transform 0.3s ease-in;
+        gap: 20px;
+    
+    
+    }
+
+    .nav-links.active {
+        display: flex; /* Show nav links when active */
+        transform: translateX(0); /* Ensure it slides in correctly */
     }
 }

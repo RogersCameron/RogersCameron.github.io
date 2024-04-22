@@ -6,7 +6,7 @@
       "genre": "Action-adventure",
       "release_date": "March 3, 2017",
       "description": "An open-world adventure game that allows players to explore the vast kingdom of Hyrule.",
-      "img_name": "images/Zelda.jpeg",
+      "img_name": "img/Zelda.jpeg",
       "url":"https://zelda.nintendo.com/breath-of-the-wild/",
       "platforms": ["Nintendo Switch", "Wii U"]
     },
@@ -16,7 +16,7 @@
       "genre": "Action RPG",
       "release_date": "May 19, 2015",
       "description": "A story-driven open-world RPG set in a visually stunning fantasy universe full of meaningful choices and impactful consequences.",
-      "img_name": "images/The Witcher.avif",
+      "img_name": "img/The Witcher.avif",
       "url":"https://www.thewitcher.com/us/en/witcher3",
       "platforms": ["PC", "PlayStation 4", "Xbox One", "Nintendo Switch"]
     },
@@ -26,7 +26,7 @@
       "genre": "Action RPG",
       "release_date": "April 12, 2016",
       "description": "A challenging, genre-defining game filled with relentless enemies, treacherous traps, and hidden secrets.",
-      "img_name": "images/Darksouls3.jpg",
+      "img_name": "img/Darksouls3.jpg",
       "url":"https://en.bandainamcoent.eu/dark-souls/dark-souls-iii",
       "platforms": ["PC", "PlayStation 4", "Xbox One"]
     },
@@ -36,7 +36,7 @@
       "genre": "First-person shooter",
       "release_date": "May 24, 2016",
       "description": "A team-based multiplayer first-person shooter with a wide array of unique heroes, fast-paced and fun gameplay, and characters with rich stories.",
-      "img_name": "images/overwatch.png",
+      "img_name": "img/overwatch.png",
       "url":"https://overwatch.blizzard.com/en-us/",
       "platforms": ["PC", "PlayStation 4", "Xbox One", "Nintendo Switch"]
     },
@@ -46,7 +46,7 @@
       "genre": "Platformer",
       "release_date": "October 27, 2017",
       "description": "An open-world 3D platformer with a variety of gameplay mechanics, including exploration, puzzle-solving, and action.",
-      "img_name": "images/Super Mario Odyssey.avif",
+      "img_name": "img/Super Mario Odyssey.avif",
       "url":"https://supermario.nintendo.com/",
       "platforms": ["Nintendo Switch"]
     }

@@ -4,21 +4,21 @@
         "_id": 1,
         "title": "Among Us",
         "link": "https://www.innersloth.com/news/",
-        "img_name": "images/among-us.jpeg",
+        "img_name": "img/among-us.jpeg",
         "description": "Catch up on the latest news, including the Lunar New Year celebration in 'Among Us.' They're sharing exciting updates and events for their popular games, ensuring fans stay engaged with fresh content and community activities. For all the details on what's new and upcoming"
       },
       {
         "_id": 2,
         "title": "Spiderman 2",
         "link": "https://www.gamingbible.com/news/platform/playstation/marvels-spiderman-2-free-download-teased-609346-20240206",
-        "img_name": "images/Spiderman-2.webp",
+        "img_name": "img/Spiderman-2.webp",
         "description": "Read the exciting news on Marvel's Spider-Man 2! Fans eagerly anticipating the New Game+ update will be thrilled to know Insomniac Games has teased a significant free download."
       },
       {
         "_id": 3,
         "title": "Star Wars Outlaws",
         "link": "https://www.ubisoft.com/en-us/game/star-wars/outlaws/news-updates",
-        "img_name": "images/starwars.jpeg",
+        "img_name": "img/starwars.jpeg",
         "description": "Hear the latest News on Star Wars OutLaws."
       }
     ]

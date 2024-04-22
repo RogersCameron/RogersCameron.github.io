@@ -39,7 +39,7 @@ const gameSchema = new mongoose.Schema({
 const Game = mongoose.model('Game', gameSchema);
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html');
+  res.sendFile(path.join(__dirname, 'final', 'index.html'));
 });
 
 app.get('/page2', (req, res) => {

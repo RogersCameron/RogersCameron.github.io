@@ -1,150 +1,126 @@
+const express = require('express');
+const Joi = require('joi');
+const multer = require('multer');
+const mongoose = require('mongoose');
+const cors = require('cors');
+const path = require('path');
+const app = express();
 
-document.addEventListener('DOMContentLoaded', async () => {
-    try {
-        const videoGames = await getVideoGames();
-        showVideoGames(videoGames);
-    } catch (error) {
-        console.error('Error loading video game data:', error);
-    }
+// Middleware to handle JSON, static files, and CORS
+app.use(express.json());
+app.use(cors());
+app.use(express.static('public'));
 
-    const gallery = document.getElementById('imageGallery');
-    const detailsContent = document.getElementById('game-details-content');
-
-    if (!gallery || !detailsContent) {
-        console.error('One or more required elements are missing!');
-        return; // Stop further execution if elements are missing
-    }
-
-    setupModalTriggers();
-    setupAddGameForm();
+// Middleware for logging requests
+app.use((req, res, next) => {
+    console.log(`Request Received: ${req.method} ${req.url}`);
+    next();
 });
 
-async function getVideoGames() {
-    const response = await fetch('/api/videogames');
-    if (!response.ok) {
-        throw new Error('Network response was not ok');
-    }
-    return await response.json();
-}
-
-function showVideoGames(videoGames) {
-    const gallery = document.getElementById('imageGallery');
-    gallery.innerHTML = '';
-
-    videoGames.forEach((game) => {
-        const div = document.createElement('div');
-        div.className = 'w3-quarter w3-container';
-        const img = document.createElement('img');
-        img.src = game.cover.startsWith('/') ? game.cover : `/images/${game.cover}`;
-        img.alt = game.title;
-        img.classList.add("w3-hover-opacity");
-        div.appendChild(img);
-        gallery.appendChild(div);
-
-        img.onclick = () => displayGameDetails(game);
-    });
-}
-
-function displayGameDetails(game) {
-    const detailsModal = document.getElementById('game-details-modal');
-    const detailsContent = document.getElementById('game-details-content');
-    detailsModal.style.display = 'block';
-
-    detailsContent.innerHTML = `
-        <h3>${game.title}</h3>
-        <p><strong>Description:</strong> ${game.description}</p>
-        <p><strong>Platforms:</strong> ${game.platforms.join(', ')}</p>
-        <img src="${game.cover}" style="width:50%;">
-        <br><br>
-        <button onclick="populateEditForm(${JSON.stringify(game).split('"').join("&quot;")})" class="edit-game-btn"><i class="fas fa-pencil-alt"></i> Edit</button>
-        <button onclick="showDeleteConfirmation('${game._id}')" class="delete-game-btn"><i class="fas fa-trash"></i> Delete</button>
-        `;
-}
-
-
-
-function setupModalTriggers() {
-    document.getElementById('showAddGameModal').addEventListener('click', () => {
-        document.getElementById('addEditGameModal').style.display = 'block';
-        resetAddGameForm();
-    });
-
-    document.querySelectorAll('.close').forEach(element => {
-        element.onclick = () => {
-            element.closest('.modal').style.display = 'none';
-        };
-    });
-}
-
-function resetAddGameForm() {
-    const form = document.getElementById('game-form');
-    form.reset();
-    document.getElementById('game-id').value = '';
-}
-
-function populateEditForm(game) {
-    const form = document.getElementById('game-form');
-    document.getElementById('game-details-modal').style.display = 'none';
-    document.getElementById('addEditGameModal').style.display = 'block';
-
-    
-    form['game-id'].value = game._id;  
-    form['title'].value = game.title;
-    form['description'].value = game.description;
-    form['platforms'].value = game.platforms.join(',');
-}
-
-function setupAddGameForm() {
-    const form = document.getElementById('game-form');
-    form.onsubmit = async (event) => {
-        event.preventDefault();
-        const formData = new FormData(form);
-        const gameId = form['game-id'].value;
-        const method = gameId ? 'PUT' : 'POST';
-        const url = gameId ? `/api/videogames/${gameId}` : '/api/videogames';
-
-        try {
-            const response = await fetch(url, {
-                method: method,
-                body: formData,
-            });
-
-            if (!response.ok) {
-                throw new Error('Failed to save the game: ' + await response.text());
-            }
-
-            alert('Game saved successfully');
-            form.reset();
-            document.getElementById('addEditGameModal').style.display = 'none';
-            // Refresh the game list
-            const videoGames = await getVideoGames();
-            showVideoGames(videoGames);
-        } catch (error) {
-            alert(error.message);
+// Multer configuration for secure file uploads
+const upload = multer({
+    storage: multer.diskStorage({
+        destination: './public/images/',
+        filename: (req, file, cb) => {
+            const uniqueSuffix = `${Date.now()}-${Math.round(Math.random() * 1E9)}`;
+            cb(null, `${file.fieldname}-${uniqueSuffix}${path.extname(file.originalname)}`);
         }
-    };
-}
+    }),
+    limits: { fileSize: 10 * 1024 * 1024 }, // 10 MB limit
+    fileFilter: (req, file, cb) => {
+        if (!file.originalname.match(/\.(jpg|jpeg|png|gif)$/)) {
+            return cb(new Error('Only image files are allowed!'), false);
+        }
+        cb(null, true);
+    }
+});
 
-const deleteGame = async () => {
-    const gameId = document.getElementById('game-id-to-delete').value;
+// MongoDB connection
+mongoose.connect('mongodb+srv://your_user:your_password@your_cluster/?retryWrites=true&w=majority')
+    .then(() => console.log('Successfully connected to MongoDB'))
+    .catch(err => {
+        console.error('Could not connect to MongoDB:', err);
+        process.exit(1);
+    });
+
+// Mongoose schema and model for Game
+const gameSchema = new mongoose.Schema({
+    title: String,
+    description: String,
+    platforms: [String],
+    cover: String,
+});
+const Game = mongoose.model('Game', gameSchema);
+
+// Routes for serving HTML files
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'page5.html'));
+});
+
+// CRUD API for games
+app.get('/api/videogames', async (req, res) => {
     try {
-        const response = await fetch(`/api/videogames/${gameId}`, {
-            method: "DELETE",
-        });
-        if (!response.ok) {
-            throw new Error('Failed to delete the game: ' + await response.text());
-        }
-        alert('Game deleted successfully');
-        document.getElementById('delete-confirmation-modal').style.display = 'none';
-        // Optionally refresh the game list or update the UI accordingly
-    } catch (error) {
-        console.error('Error during game deletion:', error.message);
-        alert('Error during game deletion: ' + error.message);
+        const games = await Game.find();
+        res.send(games);
+    } catch (err) {
+        console.error('Failed to retrieve games:', err);
+        res.status(500).send('Failed to retrieve games');
     }
+});
 
-};
+app.post('/api/videogames', upload.single('gameArtwork'), async (req, res) => {
+    const { error } = validateGame(req.body);
+    if (error) return res.status(400).send(error.details[0].message);
+    const game = new Game({
+        title: req.body.title,
+        description: req.body.description,
+        platforms: req.body.platforms.split(','),
+        cover: req.file ? `/images/${req.file.filename}` : 'default-cover.jpg'
+    });
+    try {
+        await game.save();
+        res.send(game);
+    } catch (err) {
+        console.error('Failed to save game:', err);
+        res.status(500).send('Failed to save game');
+    }
+});
 
-function showDeleteConfirmation(gameId) {
-    document.getElementById('game-id-to-delete').value = gameId; // Set the game ID to the hidden input
-    document.getElementById('delete-confirmation-modal').style.display = 'block'; // Show the modal
+app.put('/api/videogames/:id', upload.single('cover'), async (req, res) => {
+    const { error } = validateGame(req.body);
+    if (error) return res.status(400).send(error.details[0].message);
+    try {
+        const game = await Game.findByIdAndUpdate(req.params.id, req.body, { new: true });
+        if (!game) return res.status(404).send('The game with the given ID was not found.');
+        res.send(game);
+    } catch (err) {
+        console.error('Error updating game:', err);
+        res.status(500).send('Server error: ' + err.message);
+    }
+});
+
+app.delete('/api/videogames/:id', async (req, res) => {
+    try {
+        const game = await Game.findByIdAndDelete(req.params.id);
+        if (!game) return res.status(404).send('Game not found');
+        res.send({ message: 'Game deleted successfully', game });
+    } catch (err) {
+        console.error('Error deleting game:', err);
+        res.status(500).send('Server error');
+    }
+});
+
+// Joi validation for game data
+function validateGame(game) {
+    const schema = Joi.object({
+        title: Joi.string().min(3).required(),
+        description: Joi.string().min(5).required(),
+        platforms: Joi.string().required(),
+        cover: Joi.allow()
+    });
+    return schema.validate(game);
 }
+
+// Start the server
+const port = process.env.PORT || 3000;
+app.listen(port, () => console.log(`Listening on port ${port}...`));

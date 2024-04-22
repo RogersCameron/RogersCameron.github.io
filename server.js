@@ -37,8 +37,26 @@ const gameSchema = new mongoose.Schema({
 
 const Game = mongoose.model('Game', gameSchema);
 
+// Main route for 'index.html'
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html');
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
+// Additional routes for other pages
+app.get('/page2', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'page2.html'));
+});
+
+app.get('/page3', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'page3.html'));
+});
+
+app.get('/page4', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'page4.html'));
+});
+
+app.get('/page5', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'page5.html'));
 });
 
 app.get('/api/videogames', async (req, res) => {

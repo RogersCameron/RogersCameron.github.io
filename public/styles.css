@@ -1,189 +1,193 @@
-:root {
-    --primary-color: #1F1B24; /* Darker primary color */
-    --hover-color: orangered; /* Vibrant hover color */
-    --text-color: #BBBBBB; /* Light grey text for readability */
-    --background-color: #121212; /* Very dark background for main areas */
-    --modal-background: #1E1E1E; /* Dark background for modals */
-    --shadow-color: rgba(255, 255, 255, 0.1); /* Lighter shadow color for depth */
-}
-.w3-button.w3-display-topright {
-    color: black !important; /* Always black, overriding other styles */
-}
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+body, html {
     margin: 0;
     padding: 0;
-    background-color: var(--background-color);
-    color: var(--text-color);
-}
-.edit-game-btn {
-    margin-right: 10px; /* Adjust the value as needed */
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* Dark background */
 }
 
-.edit-game-btn, .delete-game-btn {
-    margin-right: 10px;
-}
-
-header {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 2px 4px var(--shadow-color);
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2em;
-}
-
-header a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.5em;
-    margin-left: 15px;
-    padding: 5px 10px;
-    background-color: var(--hover-color);
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-header a:hover {
-    background-color: orangered;
-}
-
-.columns {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 20px;
-    justify-content: space-around;
-}
-
-.w3-quarter {
-    margin-bottom: 20px;
-    transition: transform 0.3s ease;
-}
-
-.w3-quarter:hover {
-    transform: translateY(-5px);
-}
-
-.w3-modal-content {
-    border-radius: 10px;
-    box-shadow: 0 4px 8px var(--shadow-color);
-    transition: all 0.3s ease;
-}
-
-.w3-button {
-    cursor: pointer;
-}
-
-.w3-container {
-    padding: 20px;
-    background-color: var(--modal-background);
-}
-
-.game-actions {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 20px;
-}
-
-.game-edit, .game-delete {
-    margin-left: 25px;
-    cursor: pointer;
-    color: var(--primary-color);
-    font-weight: bold;
-}
-
-.game-edit:hover, .game-delete:hover {
-    color: var(--hover-color);
-}
-
-#platform-boxes input, #title, #description {
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-#gameArtwork {
-    display: block;
-    margin-top: 10px;
-}
-
-#artwork-prev {
-    max-width: 100px;
-    margin-top: 10px;
-    border-radius: 5px; /* Added border-radius */
-}
-
-button, .edit-game-btn, .delete-game-btn {
-    background-color: var(--primary-color);
-    color: white;
+nav {
+    background-color: #1F1B24; /* Darker shade for the nav */
+    color: #FFFFFF; /* White text for contrast */
     padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-   margin-left: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+}
+#latest-news h2{
+    text-align: center;
+
+}
+#popular-games h2{
+    text-align: center;
+}
+.logo h1 {
+    margin: 0;
+    color: orangered; /* Bright accent color for branding */
 }
 
-button:hover, .edit-game-btn:hover, .delete-game-btn:hover {
-    background-color: var(--hover-color);
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    color: #BBBBBB; /* Light grey text for readability */
+}
+
+section {
+    width: 48%;
+}
+
+article {
+    background-color: #1E1E1E; /* Dark background for articles */
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); /* Subtle white shadow for depth */
+    transition: transform 0.2s;
+}
+
+article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2); /* More pronounced shadow on hover */
+}
+
+article img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+#popular-games a, #latest-news a {
+    text-align: center;
+    text-decoration: none;
+    color: orangered; /* Use a bright, contrasting color for links */
+}
+
+.box-hover {
+    background-color: rgba(0,0,0,0.8); /* Dark overlay for hover effect */
     color: white;
 }
-
-#addPlatform {
-    background-color: #28a745;
-    border-color: #28a745;
+/* Keyframes for typing and blink-cursor animations */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
 }
 
-#addPlatform:hover {
-    background-color: #218838;
-    border-color: #1e7e34;
+@keyframes blink-cursor {
+    from, to { border-color: transparent; }
+    50% { border-color: black; }
 }
 
-#game-details-content img {
-    max-width: 50%;
+#typing-logo {
+    font-family: 'Courier New', monospace;
+    overflow: hidden;
+    border-right: .15em solid black;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: typing 3.5s steps(30, end), blink-cursor .75s step-end infinite;
+}
+#game-pulse-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1F1B24;
+    color: #ffffff;
+    padding: 0 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    position: absolute;
+    margin-left: 500px;
+}
+
+.nav-links li {
+    padding: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
     display: block;
-    margin: 10px auto;
-    border-radius: 5px; /* Soften the edges */
+    margin-top: 5px;
+    background: orangered;
+    transition: width .3s;
+    
 }
 
-.edit-game-btn, .delete-game-btn {
-    margin: 10px 5px; /* Adjust spacing */
+.nav-links a:hover::after {
+    width: 100%;
 }
 
-.edit-game-btn {
-    background-color: #4CAF50; /* Green */
+.hamburger {
+    display: none; /* Initially hide the hamburger menu */
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 25px; /* Adjust based on your design */
+    width: 30px;
 }
 
-.delete-game-btn {
-    background-color: red; /* Red */
+.line {
+    display: block; /* Make sure lines are block-level elements */
+    width: 100%;
+    height: 3px;
+    background-color: orangered; /* This makes the lines white */
 }
-
-.edit-game-btn:hover {
-    background-color: #45a049;
-}
-
-.delete-game-btn:hover {
-    background-color: #d32f2f;
-}
-
-.game-actions {
-    text-align: right;
-    padding-bottom: 20px;
-}
-
-/* Responsive layout adjustments */
-@media (max-width: 600px) {
-    .columns {
+@media (max-width: 768px) {
+    main {
         flex-direction: column;
     }
 
-    .w3-modal-content {
-        width: 90% !important; /* Override w3.css settings for smaller screens */
+    section {
+        width: 100%;
     }
+
+    .logo {
+        position: relative; /* Adjust if necessary */
+        z-index: 3; /* Higher than the hamburger and nav-links to prevent cut-off */
+        text-align: center; /* Center-align the logo */
+    }
+
+   
+    .box {
+        width: 100%; /* Each box takes full width */
+        margin-bottom: 10px; /* Reduce space between stacked boxes */
+    }
+
+    .hamburger {
+        display: flex; /* Show the hamburger menu on smaller screens */
+    }
+    .nav-links {
+        position: absolute;
+        right: 0;
+        top: 60px; /* Adjust based on the height of your nav bar */
+        background-color: #1F1B24; /* Same as nav background */
+        flex-direction: column;
+        align-items: center;
+        width: 100%; /* Full width */
+        display: none; /* Initially hide the nav links */
+        transition: transform 0.3s ease-in;
+        gap: 20px;
+    
+    }
+    .nav-links.active {
+        display: flex; /* Show nav links when active */
+        transform: translateX(0); /* Ensure it slides in correctly */
+    }
+    #latest-news {
+        margin-top: 40px;
+    
+    }
+   
 }
